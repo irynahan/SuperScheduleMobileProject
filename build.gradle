@@ -12,6 +12,18 @@ repositories {
 dependencies {
     implementation 'org.testng:testng:7.5'
     implementation 'io.appium:java-client:7.6.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+    implementation 'com.jayway.restassured:rest-assured:2.9.0'
+    implementation 'org.hamcrest:hamcrest:2.2'
+
 }
 
 test {

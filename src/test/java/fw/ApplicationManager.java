@@ -13,6 +13,17 @@ public class ApplicationManager {
 
     UserHelper user;
     EventHelper event;
+    CurrencyHelper currency;
+
+    public CurrencyHelper getCurrency() {
+        return currency;
+    }
+
+    public WageHelper getWage() {
+        return wage;
+    }
+
+    WageHelper wage;
 
     public UserHelper getUser() {
         return user;
@@ -34,6 +45,8 @@ public class ApplicationManager {
 
         user = new UserHelper(driver);
         event = new EventHelper(driver);
+        currency = new CurrencyHelper(driver);
+        wage = new WageHelper(driver);
 
     }
 

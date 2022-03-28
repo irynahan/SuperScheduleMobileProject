@@ -120,4 +120,21 @@ public class HelperBase {
                 .moveTo(PointOption.point(leftPoint, middleY))
                 .release().perform();
     }
+
+    public void swipeUp() {
+        TouchAction action = new TouchAction(driver);
+        //get activity points
+        Dimension size = driver.manage().window().getSize();
+        int x = size.width/2;
+
+        int startY= (int) (size.height * 0.8);
+        int stopY = (int) (size.height * 0.2);
+
+        action.longPress(PointOption.point(x, startY))
+                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+                .moveTo(PointOption.point(x,stopY))
+                .release()
+                .perform();
+
+    }
 }

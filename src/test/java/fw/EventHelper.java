@@ -143,4 +143,5 @@ public class EventHelper extends HelperBase {
     public void tapOnDeleteEvent() {
         tap(By.id("delete_menu"));
     }
+
 }
